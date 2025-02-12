@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive To-Do List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: cursive;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .shopify-text {
+        color: rgb(180, 26, 0);
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .cart-img {
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      #arr {
+        flex: 1;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid rgb(180, 26, 0);
+        outline: none;
+        font-size: 16px;
+      }
+
+      .button-pp {
+        background-color: rgb(180, 26, 0);
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .button-pp:hover {
+        background-color: rgb(150, 20, 0);
+      }
+
+      #disp {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .task {
+        background: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .deleteItem-btn,
+      .edit-btn {
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      .deleteItem-btn {
+        background-color: red;
+        color: white;
+      }
+
+      .edit-btn {
+        background-color: yellow;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          width: 95%;
+        }
+
+        .shopify-text {
+          font-size: 20px;
+        }
+
+        .input-container {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        #arr {
+          width: 100%;
+        }
+
+        .button-pp {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="cart-img" src="images-removebg-preview (4).png" alt="Cart" />
+      <h3 class="shopify-text">SHOPIFY</h3>
+      <div class="input-container">
+        <input required id="arr" type="text" placeholder="Enter task..." />
+        <button class="button-pp" onclick="add()">ADD</button>
+      </div>
+      <div id="disp"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
